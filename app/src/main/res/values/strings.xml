@@ -1,0 +1,125 @@
+<resources>
+    <string name="app_name">BMI App</string>
+    <string name="bmi_info_title">BMI Info</string>
+    <string name="mass_kg">Mass [kg]:</string>
+    <string name="mass_kg_with_val">Mass [kg]: %s</string>
+    <string name="mass_lb">Mass [lb]:</string>
+    <string name="mass_lb_with_val">Mass [lb]: %s</string>
+    <string name="empty_mass">Please enter mass.</string>
+    <string name="incorrect_mass">Please enter correct mass.</string>
+    <string name="count_bmi">Count BMI</string>
+    <string name="height_cm">Height [cm]:</string>
+    <string name="height_cm_with_val">Height [cm]: %s</string>
+    <string name="height_in">Height [in]:</string>
+    <string name="height_in_with_val">Height [in]: %s</string>
+    <string name="empty_height">Please enter height.</string>
+    <string name="incorrect_height">Please enter correct height.</string>
+    <string name="empty_value">0.0</string>
+    <string name="massHintText">0.0</string>
+    <string name="heightHintText">0.0</string>
+    <string name="to_imperial_unit_text">Use imperial units</string>
+    <string name="bmi_image_desc">BMI image</string>
+
+    <string name="back_button_text">Back</string>
+
+    <string name="bmi_very_severely_underweight">You are very severely underweight!</string>
+    <string name="bmi_very_severely_underweight_info">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
+        Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
+        sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
+        Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
+        nisi at molestie. Praesent congue accumsan odio, non fringilla elit feugiat vel.
+        Mauris ac nisi et nibh condimentum finibus in malesuada est. Nulla a ullamcorper libero.
+        Donec vehicula sapien mauris, et suscipit neque varius vel. Nullam lectus sem,
+        scelerisque at odio placerat, viverra pretium lorem.
+    </string>
+    <string name="bmi_severely_underweight">You are severely underweight!</string>
+    <string name="bmi_severely_underweight_info">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
+        Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
+        sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
+        Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
+        nisi at molestie. Praesent congue accumsan odio, non fringilla elit feugiat vel.
+        Mauris ac nisi et nibh condimentum finibus in malesuada est. Nulla a ullamcorper libero.
+        Donec vehicula sapien mauris, et suscipit neque varius vel. Nullam lectus sem,
+        scelerisque at odio placerat, viverra pretium lorem.
+    </string>
+    <string name="bmi_underweight">You are underweight!</string>
+    <string name="bmi_underweight_info">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
+        Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
+        sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
+        Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
+        nisi at molestie. Praesent congue accumsan odio, non fringilla elit feugiat vel.
+        Mauris ac nisi et nibh condimentum finibus in malesuada est. Nulla a ullamcorper libero.
+        Donec vehicula sapien mauris, et suscipit neque varius vel. Nullam lectus sem,
+        scelerisque at odio placerat, viverra pretium lorem.
+    </string>
+    <string name="bmi_normal_weight">You have normal weight!</string>
+    <string name="bmi_normal_weight_info">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
+        Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
+        sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
+        Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
+        nisi at molestie. Praesent congue accumsan odio, non fringilla elit feugiat vel.
+        Mauris ac nisi et nibh condimentum finibus in malesuada est. Nulla a ullamcorper libero.
+        Donec vehicula sapien mauris, et suscipit neque varius vel. Nullam lectus sem,
+        scelerisque at odio placerat, viverra pretium lorem.
+    </string>
+    <string name="bmi_overweight">You are overweight!</string>
+    <string name="bmi_overweight_info">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
+        Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
+        sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
+        Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
+        nisi at molestie. Praesent congue accumsan odio, non fringilla elit feugiat vel.
+        Mauris ac nisi et nibh condimentum finibus in malesuada est. Nulla a ullamcorper libero.
+        Donec vehicula sapien mauris, et suscipit neque varius vel. Nullam lectus sem,
+        scelerisque at odio placerat, viverra pretium lorem.
+    </string>
+    <string name="bmi_moderately_obese">You are moderately obese!</string>
+    <string name="bmi_moderately_obese_info">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
+        Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
+        sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
+        Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
+        nisi at molestie. Praesent congue accumsan odio, non fringilla elit feugiat vel.
+        Mauris ac nisi et nibh condimentum finibus in malesuada est. Nulla a ullamcorper libero.
+        Donec vehicula sapien mauris, et suscipit neque varius vel. Nullam lectus sem,
+        scelerisque at odio placerat, viverra pretium lorem.
+    </string>
+    <string name="bmi_severely_obese">You are severely obese!</string>
+    <string name="bmi_severely_obese_info">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
+        Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
+        sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
+        Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
+        nisi at molestie. Praesent congue accumsan odio, non fringilla elit feugiat vel.
+        Mauris ac nisi et nibh condimentum finibus in malesuada est. Nulla a ullamcorper libero.
+        Donec vehicula sapien mauris, et suscipit neque varius vel. Nullam lectus sem,
+        scelerisque at odio placerat, viverra pretium lorem.
+    </string>
+    <string name="bmi_very_severely_obese">You are very severely obese!</string>
+    <string name="bmi_very_severely_obese_info">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
+        Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
+        sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
+        Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
+        nisi at molestie. Praesent congue accumsan odio, non fringilla elit feugiat vel.
+        Mauris ac nisi et nibh condimentum finibus in malesuada est. Nulla a ullamcorper libero.
+        Donec vehicula sapien mauris, et suscipit neque varius vel. Nullam lectus sem,
+        scelerisque at odio placerat, viverra pretium lorem.
+    </string>
+    <string name="bmi_error_code">Error!</string>
+    <string name="bmi_error_code_info">
+        Please report this error to administrator.
+    </string>
+    <string name="bmi_history_text">History</string>
+    <string name="example_date_text">23.04.20 15:30</string>
+    <string name="example_mass_text">Mass [kg]: 68.3</string>
+    <string name="example_height_text">Height [cm]: 172.7</string>
+    <string name="example_bmival_text">23.55</string>
+    <string name="bmi_history_title">BMI History</string>
+
+
+</resources>

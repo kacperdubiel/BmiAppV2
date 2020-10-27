@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="all">
+
+        <item
+            android:id="@+id/to_imperial_unit"
+            android:title="@string/to_imperial_unit_text" />
+
+    </group>
+    <item
+        android:id="@+id/bmi_history"
+        android:title="@string/bmi_history_text" />
+</menu>
