@@ -24,10 +24,10 @@
 
     <string name="bmi_very_severely_underweight">You are very severely underweight!</string>
     <string name="bmi_very_severely_underweight_info">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
-        Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
-        sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
-        Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
+        Very severely underweight info text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Donec vitae lacinia nisi. Phasellus molestie, lacus vitae egestas aliquet, orci augue
+        ullamcorper lacus, sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo
+        blandit. Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
         nisi at molestie. Praesent congue accumsan odio, non fringilla elit feugiat vel.
         Mauris ac nisi et nibh condimentum finibus in malesuada est. Nulla a ullamcorper libero.
         Donec vehicula sapien mauris, et suscipit neque varius vel. Nullam lectus sem,
@@ -35,7 +35,8 @@
     </string>
     <string name="bmi_severely_underweight">You are severely underweight!</string>
     <string name="bmi_severely_underweight_info">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
+        Severely underweight info text: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Donec vitae lacinia nisi.
         Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
         sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
         Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
@@ -46,7 +47,7 @@
     </string>
     <string name="bmi_underweight">You are underweight!</string>
     <string name="bmi_underweight_info">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
+        Underweight info text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
         Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
         sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
         Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
@@ -57,7 +58,7 @@
     </string>
     <string name="bmi_normal_weight">You have normal weight!</string>
     <string name="bmi_normal_weight_info">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
+        Normal weight info text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
         Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
         sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
         Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
@@ -68,7 +69,7 @@
     </string>
     <string name="bmi_overweight">You are overweight!</string>
     <string name="bmi_overweight_info">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
+        Overweight info text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
         Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
         sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
         Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
@@ -79,7 +80,7 @@
     </string>
     <string name="bmi_moderately_obese">You are moderately obese!</string>
     <string name="bmi_moderately_obese_info">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
+        Moderately obese info text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
         Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
         sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
         Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
@@ -90,7 +91,7 @@
     </string>
     <string name="bmi_severely_obese">You are severely obese!</string>
     <string name="bmi_severely_obese_info">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
+        Severely obese info text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
         Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
         sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
         Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
@@ -101,7 +102,7 @@
     </string>
     <string name="bmi_very_severely_obese">You are very severely obese!</string>
     <string name="bmi_very_severely_obese_info">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
+        Very severely obese info text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae lacinia nisi.
         Phasellus molestie, lacus vitae egestas aliquet, orci augue ullamcorper lacus,
         sit amet fringilla enim augue ut diam. Curabitur tempor nibh eu commodo blandit.
         Sed scelerisque varius nunc, eu condimentum nulla porta at. Fusce iaculis lobortis
