@@ -7,12 +7,13 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.firentis.bmiapp.bmi.Bmi
+import com.firentis.bmiapp.database.Measure
 import kotlinx.android.synthetic.main.bmi_measure.view.*
 import java.text.DecimalFormat
 
 
 class BmiHistoryAdapter(
-    private val bmiHistory: ArrayList<BmiMeasure>,
+    private val bmiHistory: List<Measure>,
     private val usingImperialUnits: Boolean
 ) : RecyclerView.Adapter<BmiHistoryAdapter.BmiHistoryViewHolder>() {
 
@@ -37,20 +38,20 @@ class BmiHistoryAdapter(
         val heightValToString: String
         val heightText: String
 
-        if(usingImperialUnits){
-            massVal = Bmi.convKgToLb(measure.mass)
-            massValToString = DecimalFormat("#.00").format(massVal).replace(",",".")
+        if(usingImperialUnits) {
+            massVal = Bmi.convKgToLb(measure.massValue)
+            massValToString = DecimalFormat("#.00").format(massVal).replace(",", ".")
             massText = context.getString(R.string.mass_lb_with_val, massValToString)
 
-            heightVal = Bmi.convCmToIn(measure.height)
-            heightValToString = DecimalFormat("#.00").format(heightVal).replace(",",".")
+            heightVal = Bmi.convCmToIn(measure.heightValue)
+            heightValToString = DecimalFormat("#.00").format(heightVal).replace(",", ".")
             heightText = context.getString(R.string.height_in_with_val, heightValToString)
         }
         else{
-            massValToString = DecimalFormat("#.00").format(measure.mass).replace(",",".")
+            massValToString = DecimalFormat("#.00").format(measure.massValue).replace(",", ".")
             massText = context.getString(R.string.mass_kg_with_val, massValToString)
 
-            heightValToString = DecimalFormat("#.00").format(measure.height).replace(",",".")
+            heightValToString = DecimalFormat("#.00").format(measure.heightValue).replace(",", ".")
             heightText = context.getString(R.string.height_cm_with_val, heightValToString)
         }
 

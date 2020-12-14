@@ -4,11 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="4dp">
+    android:layout_margin="4dp"
+    android:background="@color/backgroundColor">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/buttonBackground">
 
         <TextView
             android:id="@+id/bmiValTV"
@@ -43,6 +45,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="5dp"
                 android:text="@string/example_mass_text"
+                android:textColor="@color/defaultFontColor"
                 android:textSize="16sp"
                 android:textStyle="normal" />
 
@@ -51,6 +54,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/example_height_text"
+                android:textColor="@color/defaultFontColor"
                 android:textSize="16sp"
                 android:textStyle="normal" />
         </LinearLayout>
@@ -61,6 +65,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="20dp"
             android:text="@string/example_date_text"
+            android:textColor="@color/defaultFontColor"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

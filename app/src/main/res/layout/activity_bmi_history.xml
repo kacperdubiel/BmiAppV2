@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BmiHistoryActivity">
+    tools:context=".BmiHistoryActivity"
+    android:background="@color/backgroundColor">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -14,7 +15,8 @@
         app:layout_constraintBottom_toTopOf="@+id/backBTN2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/backgroundColor">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/bmiMeasuresRV"
@@ -37,6 +39,8 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/defaultFontColor"
+        android:background="@color/buttonBackground" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

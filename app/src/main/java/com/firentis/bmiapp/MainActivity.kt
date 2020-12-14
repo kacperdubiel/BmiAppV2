@@ -2,47 +2,66 @@ package com.firentis.bmiapp
 
 import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
+import android.hardware.Sensor
+import android.hardware.SensorEvent
+import android.hardware.SensorEventListener
+import android.hardware.SensorManager
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import com.firentis.bmiapp.bmi.Bmi
 import com.firentis.bmiapp.bmi.BmiForKgCm
 import com.firentis.bmiapp.bmi.BmiForLbIn
+import com.firentis.bmiapp.database.Measure
+import com.firentis.bmiapp.database.MeasureDatabase
+import com.firentis.bmiapp.database.MeasureDatabaseDao
 import com.firentis.bmiapp.databinding.ActivityMainBinding
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.MainScope
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
+import java.io.IOException
 import java.io.Serializable
 import java.text.DecimalFormat
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), SensorEventListener {
     private lateinit var binding: ActivityMainBinding
+
+    private lateinit var database: MeasureDatabaseDao
     private var usingImperialUnits: Boolean = false
-    private var bmiHistory: ArrayList<BmiMeasure> = ArrayList()
+    private var bmiHistory: List<Measure> = ArrayList()
+
+    var sensor: Sensor? = null
+    var sensorManager: SensorManager? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        sensor = sensorManager!!.getDefaultSensor(Sensor.TYPE_LIGHT)
+
         binding.bmiTV.setOnClickListener {
             val bmiValue = binding.bmiTV.text.toString().toDouble()
 
             val bmiCode = Bmi.getBmiCode(bmiValue)
-            if(bmiCode != Bmi.ERROR_WEIGHT_CODE) {
+            if (bmiCode != Bmi.ERROR_WEIGHT_CODE) {
                 val intent = Intent(this, BmiInfoActivity::class.java)
                 intent.putExtra("bmiValue", bmiValue)
                 startActivityForResult(intent, 1)
             }
         }
 
+        database = MeasureDatabase.getInstance(application).measureDatabaseDao
         loadBmiHistory()
     }
 
@@ -198,7 +217,7 @@ class MainActivity : AppCompatActivity() {
                 else
                     addMeasureToHistory(bmiValue, bmiCode, bmi.mass, bmi.height)
 
-                saveBmiHistory()
+                loadBmiHistory()
             }
         }
     }
@@ -208,38 +227,60 @@ class MainActivity : AppCompatActivity() {
         val formatter = SimpleDateFormat("dd.MM.yy HH:mm")
         val dateString: String = formatter.format(dateTime)
 
-        val newBmiMeasure = BmiMeasure(bmiValue, bmiCode, mass, height, dateString)
-        if(bmiHistory.size > 0 && bmiHistory.size >= Bmi.bmiHistorySize)
-            bmiHistory.removeAt(bmiHistory.size - 1)
-        bmiHistory.add(0, newBmiMeasure)
-    }
+        val bmiMeasure = Measure()
+        bmiMeasure.bmiValue = bmiValue
+        bmiMeasure.bmiCode = bmiCode
+        bmiMeasure.massValue = mass
+        bmiMeasure.heightValue = height
+        bmiMeasure.date = dateString
 
-    private fun saveBmiHistory() {
-        val sharedPreferences: SharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-        val editor : SharedPreferences.Editor = sharedPreferences.edit()
-        val gson = Gson()
+        MainScope().launch {
+            insertBmi(bmiMeasure)
 
-        val bmiHistoryJson: String = gson.toJson(bmiHistory)
-        editor.putString("bmiHistory", bmiHistoryJson)
-        editor.apply()
-
-    }
-
-    private fun loadBmiHistory(){
-        val sharedPreferences: SharedPreferences = getSharedPreferences("sharedPrefs", Context.MODE_PRIVATE)
-        val gson = Gson()
-        val type = object : TypeToken<ArrayList<BmiMeasure>>() {}.type
-
-        val bmiHistoryJson: String? = sharedPreferences.getString("bmiHistory", "")
-
-        val bmiHistoryArray: ArrayList<BmiMeasure>
-        bmiHistoryArray = if (bmiHistoryJson != "") gson.fromJson(bmiHistoryJson, type)
-                          else ArrayList()
-        bmiHistory = bmiHistoryArray
-        if(bmiHistory.size > Bmi.bmiHistorySize && Bmi.bmiHistorySize > 0){
-            while(bmiHistory.size > Bmi.bmiHistorySize)
-                bmiHistory.removeAt(bmiHistory.size - 1)
-            saveBmiHistory()
         }
+    }
+
+    private fun loadBmiHistory() {
+        MainScope().launch {
+            loadBmi(Bmi.bmiHistorySize)
+        }
+    }
+
+    private suspend fun insertBmi(measure: Measure) {
+        withContext(Dispatchers.IO) {
+            database.insert(measure)
+        }
+    }
+
+    private suspend fun loadBmi(size: Int) {
+        withContext(Dispatchers.IO) {
+            bmiHistory = database.getLastMeasures(size)
+        }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        sensorManager!!.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL)
+    }
+
+    override fun onPause() {
+        super.onPause()
+        sensorManager!!.unregisterListener(this)
+    }
+
+    override fun onSensorChanged(event: SensorEvent?) {
+        try {
+            if (event!!.values[0] < 10) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        } catch (e: IOException) {
+
+        }
+    }
+
+    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
+
     }
 }
